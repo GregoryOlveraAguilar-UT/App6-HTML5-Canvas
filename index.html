@@ -35,7 +35,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 
 
@@ -55,14 +57,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);
 }
   .page:target {
-  
     left: 0vw;
     z-index: 1;
-}
-
-img, object { 
-        max-height:90%;
-        max-width:90%;
 }
 </style>
 
@@ -72,8 +68,7 @@ img, object {
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Click the button below to get drawing!</p>
-    <a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<p>Content goes here.</p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -81,67 +76,6 @@ img, object {
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
-    </div>
-
-<div class="page" id="one">  <!-- This identifies the page as page one for the href of the button to know where to go when clicked -->
-	<div id="header" class="w3-container w3-flat-carrot">  <!-- This creates the header for the page with the relevent text below it, I added this to all pages-->
-		<h1>Draw!</h1> <!-- This is the text that will be displayed in the header -->
-	</div>
-    
-	<div id="content" class="w3-container">
-   
-   <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;">
-</canvas>
-   
-   <script>
-   function drawRectangle() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.rect(10, 10, 90, 45);
-ctx.stroke();
-}
-function drawName() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.font = "20px Arial";
-ctx.fillText("Greg", 32, 40);
-}
-
-function drawImage() {
- var canvas = document.getElementById("myCanvas");
-  var context = canvas.getContext("2d");
-  var img = new Image();
-  img.src = "https://cns.utexas.edu/images/CNS/diy_diagnostics_RGB_orange_nickname.jpg";
-  img.onload = function() {
-    context.drawImage(img, 100, 100, 1250, 1250, 110, 50, 200, 200);
-  }
-}
-
-function clearCanv() {
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.fillStyle = "clear";
-ctx.clearRect(0, 0, 400, 300);
-}
-</script>
-   
-   
-	</div>
- 
-	<a href="#one" onclick="drawRectangle();" class="w3-btn w3-black">Click here to draw a rectangle</a>
-    
-    <a href="#one" onclick="drawName();" class="w3-btn w3-black">Click here to write my cool name</a>
-   
-   <a href="#one" onclick="drawImage();" class="w3-btn w3-black">Click here to load an image</a>
-   
-   <a href="#one" onclick="clearCanv();" class="w3-btn w3-black">Click here to clear the canvas</a>
-
-    
-	<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- This is to set up the footer for this page, I added this to the end of each page -->
-		<p>DIY!</p> <!-- This is what text will be displayed in the space for the footer -->
-		</footer>	
-	</div>
 </footer>
 
 </body>
