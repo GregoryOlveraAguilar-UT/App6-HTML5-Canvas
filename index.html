@@ -63,6 +63,13 @@ function drawImage() {
   		}
 	}
 	
+function clearCanv() {
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+		ctx.fillStyle = "clear";
+		ctx.clearRect(0, 0, 400, 300);
+	}
+	
 </script>
 
 
