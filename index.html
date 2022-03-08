@@ -38,7 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 /*var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. */
-function drawRectangle() {
+function drawRectangle() { //Created a function to 
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 		ctx.beginPath();
@@ -46,14 +46,14 @@ function drawRectangle() {
 		ctx.stroke();
 	}
 	
-function drawName() {
+function drawName() { //Created a function to 
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 		ctx.font = "20px Arial";
 		ctx.fillText("Greg", 32, 40);
 	}
 	
-function drawImage() {
+function drawImage() { //Created a function to 
  	var canvas = document.getElementById("myCanvas");
   	var context = canvas.getContext("2d");
  	var img = new Image();
@@ -63,7 +63,7 @@ function drawImage() {
   		}
 	}
 	
-function clearCanv() {
+function clearCanv() { //Created a function to 
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 		ctx.fillStyle = "clear";
@@ -115,14 +115,14 @@ function clearCanv() {
 	</div>
 	
 <div id="content" class="w3-container">
-   <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;">
+   <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"> <!-- This creates a canvas identified as "myCanvas" that is defined with the specified width and height a 1px border is created with the specified color being black -->
 </canvas>
-	</div>
+	</div> <!-- This makes sure my buttons are below the canvas and not within the same space-->
 	
-<a href="#one" onclick="drawRectangle();" class="w3-btn w3-black">Draw a rectangle</a>
-<a href="#one" onclick="drawName();" class="w3-btn w3-black">Write my cool name</a>
-<a href="#one" onclick="drawImage();" class="w3-btn w3-black">Load an image</a>
-<a href="#one" onclick="clearCanv();" class="w3-btn w3-black">Clear</a>
+<a href="#one" onclick="drawRectangle();" class="w3-btn w3-black">Draw a rectangle</a> <!-- This button calls upon the "drawRectangle();" function and displays it on the page labeled one, button color is black and displays the text between the "> </a>"-->
+<a href="#one" onclick="drawName();" class="w3-btn w3-black">Write my cool name</a> <!-- This button calls upon the "drawName();" function and displays it on the page labeled one, button color is black and displays the text between the "> </a>"-->
+<a href="#one" onclick="drawImage();" class="w3-btn w3-black">Load an image</a> <!-- This button calls upon the "drawImage();" function and displays it on the page labeled one, button color is black and displays the text between the "> </a>"-->
+<a href="#one" onclick="clearCanv();" class="w3-btn w3-black">Clear</a> <!-- This button calls upon the "clearCanv();" function and displays it on the page labeled one, button color is black and displays the text between the "> </a>"-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!-- This is to set up the footer for this page, I added this to the end of each page -->
 	<p>DIY!</p> <!-- This is what text will be displayed in the space for the footer -->	
