@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of the code 
  
 Known Issues:
 blah, blah, blah, blah
@@ -43,32 +43,32 @@ function drawRectangle() { // Created a function to draw a rectangle within the 
 	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
 		ctx.beginPath();
-		ctx.rect(10, 10, 90, 45);
+		ctx.rect(10, 10, 90, 45); // This sets the coordinates for the rectangle to be drawn in 
 		ctx.stroke();
 	}
 	
 function drawName() { // Created a function to write my name within the canvas
 	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
-		ctx.font = "20px Arial";
-		ctx.fillText("Greg", 32, 40);
+		ctx.font = "20px Arial"; // Font for whatver is going to be displayed in the canvas
+		ctx.fillText("Greg", 32, 40); // Placement defined by the numbers and whatever is between the "" will be displayed in the canvas
 	}
 	
 function drawImage() { // Created a function to display a chosen image on the canvas
  	var canvas = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
   	var context = canvas.getContext("2d");
  	var img = new Image();
-  		img.src = "https://cns.utexas.edu/images/CNS/diy_diagnostics_RGB_orange_nickname.jpg";
- 		img.onload = function() {
-    			context.drawImage(img, 100, 100, 1250, 1250, 110, 50, 200, 200);
+  		img.src = "https://cns.utexas.edu/images/CNS/diy_diagnostics_RGB_orange_nickname.jpg"; // This is the image address from which the image is from so the code knows where to grab it from
+ 		img.onload = function() { // This function is meant to activate when the image is loaded
+    			context.drawImage(img, 100, 100, 1250, 1250, 110, 50, 200, 200); // This line draws the variable named img which is the image and the numbers serve as coordinates that dictate the size of the image and how it is displayed on the canvas
   		}
 	}
 	
 function clearCanv() { // Created a function to clear the canvas
 	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
-		ctx.fillStyle = "clear";
-		ctx.clearRect(0, 0, 400, 300);
+		ctx.fillStyle = "clear";// This line fills and replaces whatever is in the canvas with "clear"
+		ctx.clearRect(0, 0, 400, 300); // This line dictates the coordinates for which the canvas will be filled in
 	}
 	
 </script>
@@ -94,20 +94,20 @@ function clearCanv() { // Created a function to clear the canvas
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+<div id="header" class="w3-container w3-flat-carrot"> <!-- This creates the header for the page with the relevent text below it, I added this to all pages-->
+	<h1>App6---HTML5-Canvas</h1> <!-- This is the text that will be displayed in the header -->
 </div>
 	
-<div id="content" class="w3-container">
-	<p>Click the button below to get drawing!</p>
-    		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+<div id="content" class="w3-container"> <!-- Whatever is below this will be in the "content" part of the page -->
+	<p>Click the button below to get drawing!</p> <!-- This text will be displayed in the "content" part of the page aboove the button-->
+    		<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- This button will take you to the page labeled as "one"-->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- This is to set up the footer for this page, I added this to the end of each page -->
+	<p>DIY!</p> <!-- This is what text will be displayed in the space for the footer -->	
 </div>
 	
 <div class="page" id="one">  <!-- This identifies the page as page one for the href of the button to know where to go when clicked -->
@@ -115,7 +115,7 @@ function clearCanv() { // Created a function to clear the canvas
 		<h1>Draw!</h1> <!-- This is the text that will be displayed in the header -->
 	</div>
 	
-<div id="content" class="w3-container">
+<div id="content" class="w3-container"> <!-- Whatever is below this will be in the "content" part of the page -->
    <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"> <!-- This creates a canvas identified as "myCanvas" that is defined with the specified width and height a 1px border is created with the specified color being black -->
 </canvas>
 	</div> <!-- This makes sure my buttons are below the canvas and not within the same space-->
