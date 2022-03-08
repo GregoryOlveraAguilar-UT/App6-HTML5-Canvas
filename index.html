@@ -38,23 +38,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 /*var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. */
-function drawRectangle() { //Created a function to 
-	var c = document.getElementById("myCanvas");
+	
+function drawRectangle() { // Created a function to draw a rectangle within the canvas
+	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
 		ctx.beginPath();
 		ctx.rect(10, 10, 90, 45);
 		ctx.stroke();
 	}
 	
-function drawName() { //Created a function to 
-	var c = document.getElementById("myCanvas");
+function drawName() { // Created a function to write my name within the canvas
+	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
 		ctx.font = "20px Arial";
 		ctx.fillText("Greg", 32, 40);
 	}
 	
-function drawImage() { //Created a function to 
- 	var canvas = document.getElementById("myCanvas");
+function drawImage() { // Created a function to display a chosen image on the canvas
+ 	var canvas = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
   	var context = canvas.getContext("2d");
  	var img = new Image();
   		img.src = "https://cns.utexas.edu/images/CNS/diy_diagnostics_RGB_orange_nickname.jpg";
@@ -63,8 +64,8 @@ function drawImage() { //Created a function to
   		}
 	}
 	
-function clearCanv() { //Created a function to 
-	var c = document.getElementById("myCanvas");
+function clearCanv() { // Created a function to clear the canvas
+	var c = document.getElementById("myCanvas"); // This line grabs the canvas labeled "myCanvas" in order to display what the function asks for
 	var ctx = c.getContext("2d");
 		ctx.fillStyle = "clear";
 		ctx.clearRect(0, 0, 400, 300);
